@@ -3,25 +3,71 @@
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 10vmin;
   pointer-events: none;
 }
+body{
+  background-image: url(../src/bg.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.glass {
+  /* max-height: 500px; */
+  /* max-width: 200px; */
+  /* min-width: 120px; */
+  max-width: fit-content;
+  width: 100%;
+  padding: 0px 10px;
+   background: linear-gradient(
+     to right bottom,
+     rgba(255, 255, 255, 0),
+     rgba(255, 255, 255, 0)
+   );
+   border-radius: 2rem;
+   z-index: 1;
+   backdrop-filter: blur(9px);
+  display: flex;
+  margin: auto;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+ }
+.glassFooter {
+  width: 100%;
+   background: linear-gradient(
+     to right bottom,
+     rgba(255, 255, 255, 0),
+     rgba(255, 255, 255, 0)
+   );
+   z-index: 1;
+   backdrop-filter: blur(5px);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+ }
+ .input-data input{
+     display: block;
+     height: 100%;
+     width: 100%;
+     border: none;
+     font-size: 17px;
+     border-bottom: 2px solid rgba(255, 5, 5, 0.3);
+     background: transparent;
+     outline: none;
+ }
+ .input-data .underline:before,
+ .input-data .underline:after{
+ position: absolute;
+ content: "";
+ height: 100%;
+ width: 100%;
+ background: rgb(71, 238, 154);
+ transform: scaleX(0);
+ transform-origin: center;
+ transition: transform 0.3s ease;
+ }
+
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
 .App-link {
